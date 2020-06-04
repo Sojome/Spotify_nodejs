@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html html lang="es">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Reportes</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-      <a href="" class="navbar-brand mx-auto">Reporte creado por el estudiante</a>
-    </nav>
-
+    <%- include('../home/header.ejs') %>
 
     <div class="row">
       <div class="col-md-6 mt-4 text-center">
@@ -23,17 +24,16 @@
             <th>Año de creación</th>
           </tr>
           <% for (var i = 0; i < reporte3.length; i ++) { %>
-            <tr>
-              <td><%= reporte3[i].Titulo %></td>
-              <td><%= reporte3[i].Artista %></td>
-              <td><%= reporte3[i].Album %></td>
-              <td><%= reporte3[i].Duracion %></td>
-              <td><%= reporte3[i].Año_de_creacion %></td>
-            </tr>
+          <tr>
+            <td><%= reporte3[i].Titulo %></td>
+            <td><%= reporte3[i].Artista %></td>
+            <td><%= reporte3[i].Album %></td>
+            <td><%= reporte3[i].Duracion %></td>
+            <td><%= reporte3[i].Año_de_creacion %></td>
+          </tr>
           <% } %>
         </table>
       </div>
-
     </div>
   </body>
 </html>
