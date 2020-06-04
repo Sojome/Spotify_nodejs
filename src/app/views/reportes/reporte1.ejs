@@ -8,21 +8,32 @@
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
-      <a href="" class="navbar-brand mx-auto">Reporte de ingresos de usuarios</a>
+      <a href="" class="navbar-brand mx-auto">Reporte de canciones más escuchadas</a>
     </nav>
+
 
     <div class="row">
       <div class="col-md-6 mt-4 text-center">
         <table class="table table-striped table-bordered">
           <tr>
-            <th>Nombre de usuario</th>
+            <th>Titulo</th>
+            <th>Album</th>
+            <th>Artista</th>
+            <th>Cantidad de veces escuchando</th>
+            <th>Cantidad de usuariosl</th>
           </tr>
-          <% for (var i = 0; i < news.length; i ++) { %>
+          <% for (var i = 0; i < reporte1.length; i ++) { %>
             <tr>
-              <td><%= news[i].nombre %></td>
+              <td><%= reporte1[i].Titulo %></td>
+              <td><%= reporte1[i].Album %></td>
+              <td><%= reporte1[i].Artista %></td>
+              <td><%= reporte1[i].Cantidad_de_veces_escuchando %></td>
+              <td><%= reporte1[i].Cantidad_de_usuarios %></td>
             </tr>
           <% } %>
         </table>
       </div>
+
+    </div>
   </body>
 </html>
