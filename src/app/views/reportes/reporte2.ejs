@@ -23,9 +23,9 @@
           </tr>
           <% for (var i = 0; i < reporte2.length; i ++) { %>
           <tr>
-            <td><%= reporte2[i].Nombre_de_usuario %></td>
-            <td><%= reporte2[i].Ultimo_ingreso %></td>
-            <td><%= reporte2[i].Cantidad_de_ingresos_en_total %></td>
+            <td><%- reporte2[i].Nombre_de_usuario %></td>
+            <td><%- reporte2[i].Ultimo_ingreso %></td>
+            <td><%- reporte2[i].Cantidad_de_ingresos_en_total %></td>
           </tr>
           <% } %>
         </table>

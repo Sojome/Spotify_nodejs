@@ -25,11 +25,11 @@
           </tr>
           <% for (var i = 0; i < reporte1.length; i ++) { %>
           <tr>
-            <td><%= reporte1[i].Titulo %></td>
-            <td><%= reporte1[i].Album %></td>
-            <td><%= reporte1[i].Artista %></td>
-            <td><%= reporte1[i].Cantidad_de_veces_escuchando %></td>
-            <td><%= reporte1[i].Cantidad_de_usuarios %></td>
+            <td><%- reporte1[i].Titulo %></td>
+            <td><%- reporte1[i].Album %></td>
+            <td><%- reporte1[i].Artista %></td>
+            <td><%- reporte1[i].Cantidad_de_veces_escuchando %></td>
+            <td><%- reporte1[i].Cantidad_de_usuarios %></td>
           </tr>
           <% } %>
         </table>
