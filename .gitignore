@@ -1,3 +1,4 @@
 node_modules
 **/config/dbConnection.js
+**/config/server.js
 package-lock.json
