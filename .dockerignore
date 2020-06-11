@@ -1,2 +1,4 @@
 node_modules
 npm-debug.log
+**/config/dbConnection_copia.js
+**/config/server_copia.js
