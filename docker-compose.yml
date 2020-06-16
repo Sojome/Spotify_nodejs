@@ -10,5 +10,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - .:/home/node/app
+    network_mode: bridge
