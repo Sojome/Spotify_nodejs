@@ -1,9 +1,9 @@
 const app = require("./config/server");
 
-require("./app/routes/reporte3")(app);
-require("./app/routes/reporte2")(app);
-require("./app/routes/reporte1")(app);
+//Rutas
 require("./app/routes/home")(app);
+require("./app/routes/reportes_tabla")(app);
+require("./app/routes/reportes_insomnia")(app);
 
 // starting the server
 app.listen(app.get("port"), () => {
