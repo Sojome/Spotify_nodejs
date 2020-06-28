@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reportes</title>
+    <link 
+      rel="icon" 
+      type="image/png" 
+      href="https://www.pucevirtual.edu.ec/wp-content/uploads/2017/01/iconoceleste.gif"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('../home/header.ejs') %>
+
+    <div class="row">
+      
+      <div class="col-md-6 mt-4 text-center">
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>N# orden</th>
+            <th>Nombre</th>
+            <th>Producto</th>
+            <th>Fecha de la orden</th>
+          </tr>
+          <% for (var i = 0; i < class3.length; i ++) { %>
+          <tr>
+            <td><%- class3[i].orderNumber %></td>
+            <td><%- class3[i].nombre %></td>
+            <td><%- class3[i].productName %></td>
+            <td><%- class3[i].orderDate %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+      
+      <style>
+        label {
+          background-color: rgba(255, 255, 255, 0.75);
+          font-weight: bold;
+          font-size: 125%;
+        }
+      </style>
+
+      <div class="col-md-6 mt-4 text-center">
+        <form action="/class3" method="POST" class="card-body">
+          <h3 class="card-title" style="background-color: #4caf4f8f; color: white;">Ordernar proyecto</h3>
+          
+          <div class="form-group">
+              <input required type="number" name="new_orderNumber" id="new_orderNumber" class="form-control" placeholder="N# order">
+          </div>
+
+          <div class="form-group">
+            <label for="new_orderDate">Fecha de la orden</label>
+            <input required type="date" name="new_orderDate" id="new_orderDate" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="new_requiredDate">Fecha requerida</label>
+            <input required type="date" name="new_requiredDate" id="new_requiredDate" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="new_shippedDate">Fecha de entrega</label>
+            <input type="date" name="new_shippedDate" id="new_shippedDate" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <input required type="text" name="new_status" id="new_status" class="form-control" placeholder="Estado">
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="new_comments" id="new_comments" class="form-control" placeholder="Comentario">
+          </div>
+          <!--
+          <div class="form-group">
+            <input required type="number" name="new_customerNumber" id="new_customerNumber" class="form-control" placeholder="N# Cliente">
+          </div>
+          
+          <div class="form-group">
+            <input required type="text" name="new_productCode" id="new_productCode" class="form-control" placeholder="Producto">
+          </div>
+          -->
+          <div class="form-group">
+            <input required type="number" name="new_quantityOrdered" id="new_quantityOrdered" class="form-control" placeholder="Numero de productos">
+          </div>
+
+          <div class="form-group">
+            <input required type="number" name="new_priceEach" id="new_priceEach" class="form-control" placeholder="Precio unitario">
+          </div>
+
+          <div class="form-group">
+            <input required type="number" name="new_orderLineNumber" id="new_orderLineNumber" class="form-control" placeholder="N# orden de línea">
+          </div>
+
+          <input required type="submit" class="btn btn-primary">
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>
