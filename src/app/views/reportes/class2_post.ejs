@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reportes</title>
+    <link 
+      rel="icon" 
+      type="image/png" 
+      href="https://www.pucevirtual.edu.ec/wp-content/uploads/2017/01/iconoceleste.gif"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('../home/header.ejs') %>
+    <div class="col-md-6 mt-4 text-center">
+      <a class="btn btn-success" href="/class2" role="button">Realizar otra consulta</a>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mt-4 text-center">
+        <% if(data.length) { %>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th>Cliente</th>
+              <th>Total de compras</th>
+              <th>Total de productos</th>
+            </tr>
+            <% for (var i = 0; i < data.length; i ++) { %>
+            <tr>
+              <td><%- data[i].customerName %></td>
+              <td><%- data[i].total_compras %></td>
+              <td><%- data[i].total_productos %></td>
+            </tr>
+            <% } %>
+          </table>
+        <% } %>
+
+        <!-- if result is empty -->
+        <% if(!data.length) { %>
+          <p class="text-center">Información no encontrada!</p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

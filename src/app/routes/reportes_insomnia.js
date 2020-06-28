@@ -37,17 +37,4 @@ module.exports = app => {
     });
   });
   
-  app.use((req, res) => {
-    res.status(404).send({
-      success: false,
-      data: {
-        message: "Estás intentando hacer algo que no deberías",
-      },
-    });
-  });
-  
-  app.listen(4000, () => {
-    console.log("Servidor ejecutándose...");
-  });
-
 };
